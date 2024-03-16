@@ -2,8 +2,8 @@ import banner from '../assets/cook-banner.png'
 const Header = () => {
     return (
         <header className="mx-20 mb-24">
-            <div className="navbar bg-base-100 flex justify-between">
-                <div className="flex-1 w-1/3">
+            <div className="navbar bg-base-100 flex justify-between mb-10">
+                <div className="w-1/3">
                     <a className="font-bold text-4xl">Recipe<span className="text-lime-600">HUB</span></a>
                 </div>
                 <div className="navbar-center hidden lg:flex justify-between w-1/3">
@@ -47,7 +47,6 @@ const Header = () => {
             </div>
             <div className="hero min-h-[600px] rounded-3xl" style={{ backgroundImage: `url(${banner})`,
         }}>
-                <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="w-2/3 space-y-7">
                         <h1 className="mb-5 text-5xl font-bold">Discover an exceptional cooking class tailored for you!</h1>

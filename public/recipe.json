@@ -1,0 +1,80 @@
+[
+    {
+      "id": 1,
+      "recipe_name": "Indian Masala Chickpeas",
+      "recipe_image": "https:\/\/www.themealdb.com\/images\/media\/meals\/uwxqwy1483389553.jpg",
+      "description": "A classic Indian pasta dish made with  fresh chickpeas, cheese, pancetta, and fresh bay leaves.",
+      "ingredients": [
+        "300g fresh chickpeas",
+        "1 onion, chopped",
+        "fresh bay leaves"
+      ],
+      "preparing_time": 20,
+      "calories": 350
+    },
+    {
+      "id": 2,
+      "recipe_name": "Teriyaki Chicken Casserole",
+      "recipe_image": "https:\/\/www.themealdb.com\/images\/media\/meals\/wvpsxx1468256321.jpg",
+      "description": "A Teriyaki Chicken Casserole dish made with fresh chicken breasts, water, brown suger, soya sauce and fresh brown rice.",
+      "ingredients": [
+        "500g fresh chicken breasts",
+        "water, brown suger, soya sauce",
+        "500g fresh brown rice"
+      ],
+      "preparing_time": 30,
+      "calories": 500
+    },
+    {
+      "id": 3,
+      "recipe_name": "Spicy Arrabiata Penne",
+      "recipe_image": "https://www.themealdb.com//images//media//meals//ustsqw1468250014.jpg",
+      "description": "A classic Spicy Arrabiata Penne dish made with penne rigate, olive oil, cheese, pancetta,chopped tomatoes, garlic.",
+      "ingredients": [
+        "penne rigate, olive oil",
+        "chopped tomatoes, garlic",
+        "fresh bay leaves"
+      ],
+      "preparing_time": 25,
+      "calories": 450
+    },
+    {
+      "id": 4,
+      "recipe_name": "Bigos (Hunters Stew)",
+      "recipe_image": "https://www.themealdb.com//images//media//meals//md8w601593348504.jpg",
+      "description": "A Bigos dish made with Becon, Garlic, Mashroom, cheese, pancetta, and mutton stocks, diced tomatoes.",
+      "ingredients": [
+        "Becon, Garlic, Mashroom",
+        "mutton stocks, diced tomatoes",
+        "fresh bay leaves"
+      ],
+      "preparing_time": 25,
+      "calories": 450
+    },
+    {
+      "id": 5,
+      "recipe_name": "Apple Frangipan Tart",
+      "recipe_image": "https:\/\/www.themealdb.com\/images\/media\/meals\/wxywrq1468235067.jpg",
+      "description": "Apple Frangipan Tart dish made with eggs, cheese, pancetta, and black pepper.",
+      "ingredients": [
+        "300g fresh chickpeas",
+        "1 onion, chopped",
+        "fresh bay leaves"
+      ],
+      "preparing_time": 20,
+      "calories": 350
+    },
+    {
+      "id": 6,
+      "recipe_name": "Apam Balik",
+      "recipe_image": "https:\/\/www.themealdb.com\/images\/media\/meals\/adxcbq1619787919.jpg",
+      "description": "Apam Balik dish made with eggs, cheese, pancetta, and black pepper 1 onion chopped fresh bay leaves.",
+      "ingredients": [
+        "300g fresh flour",
+        "1 onion, chopped",
+        "fresh bay leaves"
+      ],
+      "preparing_time": 30,
+      "calories": 250
+    }
+]
