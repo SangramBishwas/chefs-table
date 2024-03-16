@@ -1,7 +1,7 @@
 import { BiAlarm } from "react-icons/bi";
 import { FaFireAlt } from "react-icons/fa";
 import PropTypes from 'prop-types';
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe, handlWantToCook }) => {
     const { recipe_name, recipe_image, description, preparing_time, calories, ingredients } = recipe;
     const [a, b, c] = ingredients;
     return (
@@ -25,7 +25,7 @@ const Recipe = ({ recipe }) => {
                         <div className="flex gap-1 items-center text-[#282828CC]"><FaFireAlt /><span>{calories}calories</span></div>
                     </div>
                     <div className="card-actions w-full flex">
-                        <button className="btn text-lg font-semibold bg-[#0BE58A]">Want to Cook</button>
+                        <button className="btn text-lg font-semibold bg-[#0BE58A] rounded-full" onClick={()=> handlWantToCook(recipe)}>Want to Cook</button>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,8 @@ const Recipe = ({ recipe }) => {
 };
 
 Recipe.propTypes = {
-    recipe: PropTypes.object.isRequired
+    recipe: PropTypes.object.isRequired,
+    handlWantToCook: PropTypes.func.isRequired
 };
 
 export default Recipe;
