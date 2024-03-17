@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const [recipes, setRecipes] = useState([]);
   const [cart, setCart] = useState([]);
+  const [cooking, setCooking] = useState([]);
 
   useEffect(() => {
     fetch('recipe.json')
@@ -20,13 +21,19 @@ function App() {
     !isExist ? setCart([...cart, recipe]) : toast('this item has already added');
   }
 
+  const handleCooking = (cook) => {
+    setCooking([...cooking, cook]);
+  }
+
   return (
     <>
       <Header></Header>
       <Main
         recipes={recipes}
         handlWantToCook={handlWantToCook}
+        handleCooking={handleCooking}
         cart={cart}
+        cooking={cooking}
       ><ToastContainer /></Main>
       <ToastContainer />
     </>

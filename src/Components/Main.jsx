@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Recipe from "./Recipe";
 import Cart from './Cart';
-const Main = ({ recipes, handlWantToCook, cart }) => {
+const Main = ({ recipes, handlWantToCook, cart, handleCooking, cooking }) => {
     return (
         <div className='mx-20 mb-10'>
             <h2 className='text-4xl font-bold text-center my-5'>Our Recipes</h2>
@@ -17,9 +17,12 @@ const Main = ({ recipes, handlWantToCook, cart }) => {
                         }
                     </div>
                 </div>
-                <div className='col-span-1 border-2 rounded-xl space-y-6'>
+                <div className='col-span-1 border-2 rounded-xl space-y-6 h-1/2'>
                     <h3 className='text-2xl font-bold text-center border-b border-[#28282826] py-4 mx-10'>Want to cook: {cart.length}</h3>
-                    <Cart cart={cart}></Cart>                  
+                    <Cart cart={cart}
+                    handleCooking={handleCooking}
+                    cooking={cooking}
+                    ></Cart>                  
                 </div>
             </div>
         </div>
@@ -29,7 +32,10 @@ const Main = ({ recipes, handlWantToCook, cart }) => {
 Main.propTypes = {
     recipes: PropTypes.array.isRequired,
     handlWantToCook: PropTypes.func.isRequired,
-    cart: PropTypes.array.isRequired
+    handleCooking: PropTypes.func.isRequired,
+    cart: PropTypes.array.isRequired,
+    cooking: PropTypes.array.isRequired
+
 };
 
 
