@@ -5,7 +5,7 @@ const Main = ({ recipes, handlWantToCook, cart, handleCooking, cooking, maxTime 
     return (
         <div className='mx-20 mb-10'>
             <h2 className='text-4xl font-bold text-center my-5'>Our Recipes</h2>
-            <p className='text-base text-[#150B2B99] text-center mb-12'>Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus vulputate netus pharetra rhoncus. <br /> Eget urna volutpat curabitur elementum mauris aenean neque.</p>
+            <p className='text-base text-[#150B2B99] text-center mb-12'>We are very happy to know you that we are making the best and comprehensive recipes in this town. <br /> Here some popular recipes have been included. So you can come and order and we will be so happy to provide this recipes.</p>
             <div className='grid lg:grid-cols-3 gap-10'>
                 <div className='col-span-2'>
                     <div className='grid grid-cols-2 gap-5'>
