@@ -9,6 +9,7 @@ function App() {
   const [recipes, setRecipes] = useState([]);
   const [cart, setCart] = useState([]);
   const [cooking, setCooking] = useState([]);
+  const [maxTime, setMaxTime] = useState(0);
 
   useEffect(() => {
     fetch('recipe.json')
@@ -21,7 +22,11 @@ function App() {
     !isExist ? setCart([...cart, recipe]) : toast('this item has already added');
   }
 
-  const handleCooking = (cook) => {
+  const handleCooking = (cook, time, id) => {
+    const remainCartItem = cart.filter((item) => item.id !== id);
+    setCart(remainCartItem);
+    const newMaxTime = maxTime + time;
+    setMaxTime(newMaxTime);
     setCooking([...cooking, cook]);
   }
 
@@ -34,7 +39,8 @@ function App() {
         handleCooking={handleCooking}
         cart={cart}
         cooking={cooking}
-      ><ToastContainer /></Main>
+        maxTime={maxTime}
+      ></Main>
       <ToastContainer />
     </>
   )

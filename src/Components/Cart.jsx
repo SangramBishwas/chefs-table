@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { GrFormNext } from "react-icons/gr";
-const Cart = ({ cart, handleCooking, cooking }) => {
+const Cart = ({ cart, handleCooking, cooking, maxTime }) => {
     return (
         <div className='w-full'>
             <div className="overflow-x-auto">
@@ -20,7 +20,7 @@ const Cart = ({ cart, handleCooking, cooking }) => {
                                 <td className='pl-2'>{item.recipe_name}</td>
                                 <td className='pl-2'>{item.preparing_time} minutes</td>
                                 <td className='pl-2'>{item.calories}cal</td>
-                                <td><button className='bg-sky-300 hover:bg-sky-500 hover:text-white text-2xl my-2 p-1 rounded-full' onClick={() => handleCooking(item)}><GrFormNext /></button></td>
+                                <td><button className='bg-sky-300 hover:bg-sky-500 hover:text-white text-2xl my-2 p-1 rounded-full' onClick={() => handleCooking(item, item.preparing_time, item.id)}><GrFormNext /></button></td>
                             </tr>
                         </tbody>
                     ))}
@@ -50,6 +50,13 @@ const Cart = ({ cart, handleCooking, cooking }) => {
                     }
                 </table>
             </div>
+            <div className='flex justify-center'>
+                <div className="card w-96 bg-neutral text-neutral-content justify-center">
+                    <div className="card-body items-center text-center">
+                        <h3 className="card-title">!Maximum time to prepare: <br></br>{maxTime} minutes</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
@@ -57,7 +64,8 @@ const Cart = ({ cart, handleCooking, cooking }) => {
 Cart.propTypes = {
     cart: PropTypes.array.isRequired,
     handleCooking: PropTypes.func.isRequired,
-    cooking: PropTypes.array.isRequired
+    cooking: PropTypes.array.isRequired,
+    maxTime: PropTypes.number.isRequired
 };
 
 export default Cart;
